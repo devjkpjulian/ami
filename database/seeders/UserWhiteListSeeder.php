@@ -15,73 +15,73 @@ class UserWhiteListSeeder extends Seeder
     public function run()
     {
         UserWhiteList::create([
-            'name' => 'Jac Bocalan',
-            'firstname' => 'Jac',
-            'lastname' => 'Bocalan',
-            'email' => 'jnbocalan@smart.com.ph',
+            'name' => strtolower('Jac Bocalan'),
+            'firstname' => strtolower('Jac'),
+            'lastname' => strtolower('Bocalan'),
+            'email' => strtolower('jnbocalan@smart.com.ph'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Doy Gonzales',
-            'firstname' => 'Doy',
-            'lastname' => 'Gonzales',
-            'email' => 'ddgonzales1@smart.com.ph',
+            'name' => strtolower('Doy Gonzales'),
+            'firstname' => strtolower('Doy'),
+            'lastname' => strtolower('Gonzales'),
+            'email' => strtolower('ddgonzales1@smart.com.ph'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Marmillan Cruz',
-            'firstname' => 'Marmillan',
-            'lastname' => 'Cruz',
-            'email' => 'mlcruz@smart.com.ph',
+            'name' => strtolower('Marmillan Cruz'),
+            'firstname' => strtolower('Marmillan'),
+            'lastname' => strtolower('Cruz'),
+            'email' => strtolower('mlcruz@smart.com.ph'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Gerald Ang',
-            'firstname' => 'Gerald',
-            'lastname' => 'Ang',
-            'email' => 'gerald.ang@unilever.com',
+            'name' => strtolower('Gerald Ang'),
+            'firstname' => strtolower('Gerald'),
+            'lastname' => strtolower('Ang'),
+            'email' => strtolower('gerald.ang@unilever.com'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Brian Chanyungco',
-            'firstname' => 'Brian',
-            'lastname' => 'Chanyungco',
-            'email' => 'brian.chanyungco@unilever.com',
+            'name' => strtolower('Brian Chanyungco'),
+            'firstname' => strtolower('Brian'),
+            'lastname' => strtolower('Chanyungco'),
+            'email' => strtolower('brian.chanyungco@unilever.com'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Cyvil Alcaneses',
-            'firstname' => 'Cyvil',
-            'lastname' => 'Alcaneses',
-            'email' => 'cyvil.alcaneses@unilever.com',
+            'name' => strtolower('Cyvil Alcaneses'),
+            'firstname' => strtolower('Cyvil'),
+            'lastname' => strtolower('Alcaneses'),
+            'email' => strtolower('cyvil.alcaneses@unilever.com'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Eric Pallen',
-            'firstname' => 'Cyvil',
-            'lastname' => 'Alcaneses',
-            'email' => 'eric.pallen@vouno.com.ph',
+            'name' => strtolower('Eric Pallen'),
+            'firstname' => strtolower('Cyvil'),
+            'lastname' => strtolower('Alcaneses'),
+            'email' => strtolower('eric.pallen@vouno.com.ph'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Carole Nisperos',
-            'firstname' => 'Carole',
-            'lastname' => 'Nisperos',
-            'email' => 'carole.nisperos@vouno.com.ph',
+            'name' => strtolower('Carole Nisperos'),
+            'firstname' => strtolower('Carole'),
+            'lastname' => strtolower('Nisperos'),
+            'email' => strtolower('carole.nisperos@vouno.com.ph'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Tet Gammad',
-            'firstname' => 'Tet',
-            'lastname' => 'Gammad',
-            'email' => 'celeste.larena-gammad@unilever.com',
+            'name' => strtolower('Tet Gammad'),
+            'firstname' => strtolower('Tet'),
+            'lastname' => strtolower('Gammad'),
+            'email' => strtolower('celeste.larena-gammad@unilever.com'),
         ]);
 
         UserWhiteList::create([
-            'name' => 'Jonathan Auza',
-            'firstname' => 'Jonathan',
-            'lastname' => 'Auza',
-            'email' => 'auza.jonathan@bdo.com.ph',
+            'name' => strtolower('Jonathan Auza'),
+            'firstname' => strtolower('Jonathan'),
+            'lastname' => strtolower('Auza'),
+            'email' => strtolower('auza.jonathan@bdo.com.ph'),
         ]);
     }
 }

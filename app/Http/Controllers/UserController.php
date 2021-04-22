@@ -45,10 +45,10 @@ class UserController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $request->firstname.' '.$request->lastname,
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'email' => $request->email
+            'name' => strtolower($request->firstname).' '.strtolower($request->lastname),
+            'firstname' => strtolower($request->firstname),
+            'lastname' => strtolower($request->lastname),
+            'email' => strtolower($request->email)
         ]);
 
         Auth::login($user);

@@ -21,7 +21,7 @@ Route::get('/game', function () {
     if(auth()->check() && auth()->user()->is_played == false)
     {
         $user = App\Models\User::findOrFail(auth()->user()->id);
-        $findUser = App\Models\UserWhiteList::where('is_won',false)->where('email',$user->email)->first();
+        $findUser = App\Models\UserWhiteList::where('is_won',false)->where('email',strtolower($user->email))->first();
 
         if(!is_null($findUser))
         {
@@ -30,7 +30,7 @@ Route::get('/game', function () {
             $findUser->is_won = true;
             $findUser->save();
         } else {
-            $findUser = App\Models\UserWhiteList::where('is_won',false)->where('name',$user->name)->first();
+            $findUser = App\Models\UserWhiteList::where('is_won',false)->where('name',strtolower($user->name))->first();
             if(!is_null($findUser))
             {
                 $randomizer = array(1, 1, 1);
