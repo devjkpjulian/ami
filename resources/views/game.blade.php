@@ -6,7 +6,7 @@
             </div>
             <div id="winprompt" class="hidden py-2 text-center">
                 <div class="flex flex-col items-center justify-center px-6">
-                    <h1 class="text-xl font-extrabold text-yellow-300 uppercase md:text-6xl">Congratulations!</h1>
+                    <h1 class="text-xl font-extrabold text-yellow-300 uppercase md:text-6xl">Congratulations! <br> {{auth()->user()->name}}</h1>
                     <p class="text-xs font-bold text-gray-900 md:text-lg"> Thank you again for partnering with Activation Machine!</p>
                 </div>
             </div>
@@ -30,6 +30,7 @@
                     <div class="hidden" id="card3-percent">&nbsp;</div>
                 </div>
             </div>
+            <p class="py-2 text-sm font-bold text-gray-900 md:text-lg">Get Ready to Play! Scratch To Win, and Match the 3 "You Won!" Photos & take a screenshot as proof of winning.</p>
         </div>
     </div>
     <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>

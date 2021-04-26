@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\CongratsWinner;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +30,7 @@ Route::get('/game', function () {
             $randomizer = array(1, 1, 1);
             $user->winner = true;
             $findUser->is_won = true;
+            Mail::to(auth()->user()->email)->send(new CongratsWinner());
             $findUser->save();
         } else {
             $findUser = App\Models\UserWhiteList::where('is_won',false)->where('name',strtolower($user->name))->first();
@@ -36,6 +39,7 @@ Route::get('/game', function () {
                 $randomizer = array(1, 1, 1);
                 $user->winner = true;
                 $findUser->is_won = true;
+                Mail::to(auth()->user()->email)->send(new CongratsWinner());
                 $findUser->save();
             } else {
                 $randomizer = array(rand(0, 1), 0, rand(0, 1));
