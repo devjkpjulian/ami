@@ -31,10 +31,10 @@ class UserSeeder extends Seeder
             'admin' => true
         ]);
 
-        User::create([
-            'name' => 'TEST',
-            'email' => 'test@test.com',
-            'password' => Hash::make('Zxasqw12')
-        ]);
+        // User::create([
+        //     'name' => 'TEST',
+        //     'email' => 'test@test.com',
+        //     'password' => Hash::make('Zxasqw12')
+        // ]);
     }
 }

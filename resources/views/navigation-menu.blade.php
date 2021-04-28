@@ -15,6 +15,9 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('HOME') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('whitelists.index') }}" :active="request()->routeIs('whitelists.index')">
+                        {{ __('WHITELIST') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 

@@ -83,5 +83,12 @@ class UserWhiteListSeeder extends Seeder
             'lastname' => strtolower('Auza'),
             'email' => strtolower('auza.jonathan@bdo.com.ph'),
         ]);
+
+        // UserWhiteList::create([
+        //     'name' => strtolower('Jayson Kenn Julian'),
+        //     'firstname' => strtolower('Jayson Kenn'),
+        //     'lastname' => strtolower('Julian'),
+        //     'email' => strtolower('gr34tnull@gmail.com'),
+        // ]);
     }
 }

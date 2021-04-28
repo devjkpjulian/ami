@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\Models\User;
+use App\Models\UserWhiteList;
 use Illuminate\Http\Request;
-use Laravel\Jetstream\Jetstream;
 
-class UserController extends Controller
+class UserWhitelistController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $users)
+    public function index()
     {
-        $users = $users->all()->sortBy('name');
-        return view('users.index',compact('users'));
+        return view('whitelists.index');
     }
 
     /**
@@ -27,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('auth.create');
+        //
     }
 
     /**
@@ -38,23 +35,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $results = [];
-
-        $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
-        ]);
-
-        $user = User::create([
+        UserWhiteList::create([
             'name' => strtolower($request->firstname).' '.strtolower($request->lastname),
             'firstname' => strtolower($request->firstname),
             'lastname' => strtolower($request->lastname),
             'email' => strtolower($request->email)
         ]);
 
-        Auth::login($user);
-
-        return redirect('/game');
+        return back();
     }
 
     /**
@@ -63,9 +51,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        return view('users.show',compact('user'));
+        //
     }
 
     /**
@@ -88,9 +76,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findorFail($id);
-        $user->fill($request->all())->save();
-        return back();
+        //
     }
 
     /**
@@ -99,8 +85,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
+        $user = UserWhiteList::findOrFail($id);
         $user->delete();
         return back();
     }
